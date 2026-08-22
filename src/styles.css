@@ -1,0 +1,163 @@
+/* App-local styles. Mesh chrome (settings drawer, self-ref bar) is provided by
+ * @baditaflorin/mesh-common/styles.css imported in main.tsx. */
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--mesh-bg);
+  color: var(--mesh-fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.feature-placeholder {
+  padding: 6rem 1.5rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature-placeholder h1 {
+  font-size: 1.6rem;
+  margin: 0;
+  color: var(--mesh-accent);
+}
+
+.feature-placeholder p {
+  max-width: 32rem;
+  margin: 0;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+.feature-status {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  font-variant-numeric: tabular-nums;
+}
+
+.feature {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 5rem 1.25rem 2rem;
+}
+.feature header {
+  max-width: 38rem;
+}
+.feature h1 {
+  color: var(--mesh-accent);
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  margin: 0.15rem 0 0.5rem;
+}
+.feature header p {
+  line-height: 1.5;
+  opacity: 0.8;
+}
+.eyebrow {
+  color: var(--mesh-accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.composer {
+  align-items: end;
+  background: color-mix(in srgb, var(--mesh-accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--mesh-accent) 40%, transparent);
+  border-radius: 1rem;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 10rem auto;
+  margin: 1.5rem 0 0.8rem;
+  padding: 1rem;
+}
+label {
+  display: grid;
+  font-size: 0.82rem;
+  font-weight: 700;
+  gap: 0.35rem;
+}
+small {
+  font-weight: 400;
+}
+input {
+  background: #101217;
+  border: 1px solid #41444c;
+  border-radius: 0.5rem;
+  color: inherit;
+  font: inherit;
+  padding: 0.65rem;
+}
+button {
+  background: var(--mesh-accent);
+  border: 0;
+  border-radius: 0.5rem;
+  color: #160a20;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 750;
+  padding: 0.67rem 0.8rem;
+}
+.invites {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+.invite {
+  align-items: center;
+  background: #171a20;
+  border: 1px solid #30343d;
+  border-radius: 0.85rem;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr auto;
+  padding: 1rem;
+}
+.invite strong,
+.invite code {
+  display: block;
+}
+.invite code {
+  color: var(--mesh-accent);
+  font-size: 1.05rem;
+  margin-top: 0.35rem;
+}
+.invite > span {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  grid-column: 1 / -1;
+}
+.actions button:not(:first-child) {
+  background: #343946;
+  color: var(--mesh-fg);
+}
+.empty {
+  opacity: 0.65;
+}
+@media (max-width: 38rem) {
+  .composer {
+    grid-template-columns: 1fr;
+  }
+  .invite {
+    grid-template-columns: 1fr;
+  }
+}

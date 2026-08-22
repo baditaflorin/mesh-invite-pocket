@@ -1,0 +1,7 @@
+{
+  "$schema": "https://baditaflorin.github.io/mesh-common/mesh-service.schema.json",
+  "id": "mesh-invite-pocket",
+  "category": "Privacy & utilities",
+  "subcategory": "Identity & private exchange",
+  "useCases": ["events", "clubs", "small groups"]
+}
